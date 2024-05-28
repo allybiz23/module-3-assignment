@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IT Support Ticket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        .status-open {
+            color: green;
+        }
+
+        .status-in-progress {
+            color: orange;
+        }
+
+        .status-closed {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Greeting Section -->
+    <input type="text" id="username" placeholder="Enter your name">
+    <button id="login-button">Login</button>
+    <div id="greeting" style="display: none;">Hello, <span id="user-name"></span>!</div>
+
+    <!-- Login Error Section -->
+    <input type="text" id="user-id" placeholder="User ID">
+    <input type="password" id="password" placeholder="Password">
+    <button id="login-attempt-button">Login</button>
+    <div id="error-message" style="display: none; color: red;">Incorrect login credentials. Please try again.</div>
+
+    <!-- Support Ticket Type Section -->
+    <select id="ticket-type">
+        <option value="">Select a ticket type</option>
+        <option value="computer">Computer</option>
+        <option value="software">Software</option>
+        <option value="network">Network</option>
+    </select>
+    <div id="computer-fields" style="display: none;">
+        <input type="text" placeholder="Computer Model">
+        <input type="text" placeholder="Operating System">
+    </div>
+    <div id="software-fields" style="display: none;">
+        <input type="text" placeholder="Software Name">
+        <input type="text" placeholder="Version">
+    </div>
+    <div id="network-fields" style="display: none;">
+        <input type="text" placeholder="Network Type">
+        <input type="text" placeholder="IP Address">
+    </div>
+
+    <!-- Ticket Status Section -->
+    <select id="ticket-status">
+        <option value="open">Open</option>
+        <option value="in-progress">In Progress</option>
+        <option value="closed">Closed</option>
+    </select>
+    <p id="status-text" class="status-open">Open</p>
+</body>
+
+</html>
